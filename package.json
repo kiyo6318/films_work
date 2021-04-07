@@ -10,7 +10,9 @@
     "test:us": "jest --updateSnapshot",
     "lint": "eslint . --ext .ts,.js,.tsx,.jsx",
     "lint:fix": "eslint --fix . --ext .ts,.js,.tsx,.jsx",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "husky": {
     "hooks": {
@@ -34,12 +36,18 @@
     "react-dom": "17.0.2"
   },
   "devDependencies": {
+    "@babel/core": "^7.13.14",
+    "@storybook/addon-actions": "^6.2.4",
+    "@storybook/addon-essentials": "^6.2.4",
+    "@storybook/addon-links": "^6.2.4",
+    "@storybook/react": "^6.2.4",
     "@testing-library/react": "^11.2.6",
     "@types/jest": "^26.0.22",
     "@types/node": "^14.14.37",
     "@types/react": "^17.0.3",
     "@typescript-eslint/eslint-plugin": "^4.21.0",
     "@typescript-eslint/parser": "^4.21.0",
+    "babel-loader": "^8.2.2",
     "eslint": "^7.23.0",
     "eslint-config-prettier": "^8.1.0",
     "eslint-plugin-prettier": "^3.3.1",
