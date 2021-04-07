@@ -1,12 +1,12 @@
 module.exports = {
-  roots: ["<rootDir>/src"],
+  roots: ['<rootDir>/src'],
   transform: {
-    "^.+\\.(ts|tsx)$": "ts-jest",
+    '^.+\\.(ts|tsx)$': 'ts-jest',
   },
   globals: {
-    "ts-jest": {
-      tsconfig: "<rootDir>/tsconfig.jest.json",
+    'ts-jest': {
+      tsconfig: '<rootDir>/tsconfig.jest.json',
     },
   },
-  moduleDirectories: ["node_modules", "<rootDir>"],
+  moduleDirectories: ['node_modules', '<rootDir>'],
 }

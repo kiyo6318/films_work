@@ -7,7 +7,21 @@
     "build": "next build",
     "start": "next start",
     "test": "jest",
-    "test:us": "jest --updateSnapshot"
+    "test:us": "jest --updateSnapshot",
+    "lint": "eslint . --ext .ts,.js,.tsx,.jsx",
+    "lint:fix": "eslint --fix . --ext .ts,.js,.tsx,.jsx",
+    "format": "prettier --write ."
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "yarn lint",
+      "yarn format"
+    ]
   },
   "dependencies": {
     "@chakra-ui/icons": "^1.0.8",
@@ -24,7 +38,16 @@
     "@types/jest": "^26.0.22",
     "@types/node": "^14.14.37",
     "@types/react": "^17.0.3",
+    "@typescript-eslint/eslint-plugin": "^4.21.0",
+    "@typescript-eslint/parser": "^4.21.0",
+    "eslint": "^7.23.0",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-react": "^7.23.1",
+    "husky": "^6.0.0",
     "jest": "^26.6.3",
+    "lint-staged": "^10.5.4",
+    "prettier": "^2.2.1",
     "ts-jest": "^26.5.4",
     "typescript": "^4.2.3"
   }
